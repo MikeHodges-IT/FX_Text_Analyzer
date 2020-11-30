@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="831.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <ButtonBar buttonMinWidth="80.0" buttonOrder="" minHeight="50.0" nodeOrientation="RIGHT_TO_LEFT" BorderPane.alignment="CENTER">
+         <buttons>
+            <SplitPane dividerPositions="0.3645390070921986" prefHeight="42.0" prefWidth="727.0">
+               <items>
+                  <AnchorPane prefHeight="38.0" prefWidth="393.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="btnAbout" mnemonicParsing="false" onAction="#onActionBtn" prefHeight="36.0" prefWidth="72.0" text="About" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="btnHelp" alignment="CENTER" mnemonicParsing="false" onAction="#onActionBtn" prefHeight="36.0" prefWidth="174.0" text="Hide Help" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5146726862302483" prefHeight="160.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="btnChart" alignment="CENTER" mnemonicParsing="false" onAction="#onActionBtn" prefHeight="158.0" prefWidth="136.0" text="Graph Data" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="btnSelect" alignment="CENTER" mnemonicParsing="false" onAction="#onActionBtn" prefHeight="158.0" prefWidth="136.0" text="Select Text" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="btnStart" alignment="CENTER" mnemonicParsing="false" onAction="#onActionBtn" prefHeight="36.0" prefWidth="129.0" text="Select URL" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </buttons>
+
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ButtonBar>
+   </top>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <center>
+      <SplitPane fx:id="splitHelp" dividerPositions="0.16" orientation="VERTICAL" prefHeight="771.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="infoWebAnc" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <WebView fx:id="infoWeb" prefHeight="118.0" prefWidth="725.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <BarChart fx:id="barChart" layoutX="5.0" legendVisible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>         
+                    
+
+                      <CategoryAxis animated="false" disable="true" endMargin="20.0" gapStartAndEnd="false" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="696.0" startMargin="20.0" tickLabelGap="10.0" tickLength="1.0">
+                     
+  
+                     </CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                   
+                      <NumberAxis label="Word Frequency">
+
+                       </NumberAxis>
+                    </yAxis>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+                  </BarChart>
+                  <TextArea fx:id="textarea1" prefHeight="645.0" prefWidth="725.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <WebView fx:id="webView" onMouseDragged="#onMouseDrag" prefHeight="645.0" prefWidth="725.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="urlAnchor" prefHeight="293.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="urlTxt" layoutX="10.0" layoutY="24.0" prefHeight="25.0" prefWidth="697.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="279.0" text="Enter  URL to select words to count" />
+                        <Button fx:id="btnFormSelect" layoutX="639.0" layoutY="69.0" mnemonicParsing="false" onAction="#onActionBtn" text="Select" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

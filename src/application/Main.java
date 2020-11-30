@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 /**
  * 
- * This is the Text Analyzer Project. This class extends Application for javaFx.
+ * <h1>This is the Text Analyzer Project. This class extends Application for javaFx.</h1>
  *
  */
 /**

@@ -2,6 +2,23 @@ package application;
 import java.sql.*;
 import java.util.LinkedHashMap;
 import java.util.stream.Stream;
+/**
+* <h1>Java db</h1>
+* 
+* 
+* 
+* <b>Note:</b>
+* The TextAnalyzer class contains the following methods:
+* 
+* public void sql(String)
+* public LinkedHashMap<String,Long> sqlCountToHashMap(String)  
+*
+*
+* 
+* @author  Mike Hodges
+* @version 1.0
+* @since   2020-11-30
+*/
 
 public class Javadb {
 		String databaseName = "wordoccurrencesdb";
@@ -10,26 +27,42 @@ public class Javadb {
     	String password = "password";
      	
 	/**
-	 * 
+	 * Initializes a new instance.
 	 */
 	public Javadb() {
 	
 	}
 	/**
+	 * 
+	 * Initializes a new instance with database name.
+	 * 
 	 * @param databaseName
 	 */
 	public Javadb(String databaseName) {
 		this.databaseName = databaseName;
 	}
 	/**
+	 * 
+	 * Initializes a new instance with:
+	 * Database name 
+	 * URL Location of Database	
+	 * 	 
 	 * @param databaseName
-	 * @param url
+	 * @param url 
 	 */
 	public Javadb(String databaseName, String url) {
 		this.databaseName = databaseName;
 		this.url = url;
 	}
 	/**
+	 * 
+	 * Initializes a new instance with:
+	 * Database name 
+	 * URL Location of Database	
+	 * User Name 
+	 * Password
+	 * 
+	 * 
 	 * @param databaseName
 	 * @param url
 	 * @param user
@@ -74,8 +107,13 @@ public class Javadb {
 		
 	}
 	/**
-	 * Covert a string remove html from string and insert the data into a database.
-	 * Then uses Sql Sql stored procedures to count the word occurrences and insert 
+	 * 
+	 * public LinkedHashMap<String,Long> sqlCountToHashMap(String str)  
+	 * Takes a string and returns a linkHashMap of word occurrence.
+	 * Uses a database to count word occurrence.
+	 *
+	 * Covert a string of html to an array array of strings and insert the data into a database.
+	 * Then uses SQl, SQL stored procedures to count the word occurrences and insert 
 	 * the record set into a  LinkedHashMap. LinkedHashMap String, Long of value pair
 	 * containing words and how many times each word occurred in the string. 
 	 * 

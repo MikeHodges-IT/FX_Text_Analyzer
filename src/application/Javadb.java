@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 * The TextAnalyzer class contains the following methods:
 * 
 * public void sql(String)
-* public LinkedHashMap<String,Long> sqlCountToHashMap(String)  
+* public LinkedHashMap String,Long sqlCountToHashMap(String)  
 *
 *
 * 
@@ -36,7 +36,7 @@ public class Javadb {
 	 * 
 	 * Initializes a new instance with database name.
 	 * 
-	 * @param databaseName
+	 * @param databaseName Database name
 	 */
 	public Javadb(String databaseName) {
 		this.databaseName = databaseName;
@@ -44,11 +44,11 @@ public class Javadb {
 	/**
 	 * 
 	 * Initializes a new instance with:
-	 * Database name 
-	 * URL Location of Database	
+	 *
+	 * 
 	 * 	 
-	 * @param databaseName
-	 * @param url 
+	 * @param databaseName  Database name  
+	 * @param url URL Location of Database	
 	 */
 	public Javadb(String databaseName, String url) {
 		this.databaseName = databaseName;
@@ -57,16 +57,12 @@ public class Javadb {
 	/**
 	 * 
 	 * Initializes a new instance with:
-	 * Database name 
-	 * URL Location of Database	
-	 * User Name 
-	 * Password
 	 * 
-	 * 
-	 * @param databaseName
-	 * @param url
-	 * @param user
-	 * @param password
+	 *  
+	 * @param databaseName Database name 
+	 * @param url URL Location of Database	
+	 * @param user User Name 
+	 * @param password Password
 	 */
 	public Javadb(String databaseName, String url, String user, String password) {
 		this.databaseName = databaseName;
@@ -77,7 +73,7 @@ public class Javadb {
 	/**
 	 * Execute an Sql Statement
 	 * 
-	 * @param sql
+	 * @param sql Sql Statement
 	 */
 	public void sql(String sql) {
 //		System.out.println("Running SQL");
@@ -108,7 +104,7 @@ public class Javadb {
 	}
 	/**
 	 * 
-	 * public LinkedHashMap<String,Long> sqlCountToHashMap(String str)  
+	 * public LinkedHashMap String,Long sqlCountToHashMap(String str)  
 	 * Takes a string and returns a linkHashMap of word occurrence.
 	 * Uses a database to count word occurrence.
 	 *
